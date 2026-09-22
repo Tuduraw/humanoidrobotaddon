@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "humanoidrobotaddon:item/humanoid_robot_spawner_t2"
+  }
+}

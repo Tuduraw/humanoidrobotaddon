@@ -1,0 +1,20 @@
+{
+  "itemGroup.humanoidrobotaddon.humanoid_robots": "Humanoid Robots",
+  "item.humanoidrobotaddon.category.humanoid_robot": "Humanoid Robot",
+  "item.humanoidrobotaddon.humanoid_robot_spawner_t1": "Humanoid Robot (Tier 1)",
+  "item.humanoidrobotaddon.humanoid_robot_spawner_t2": "Humanoid Robot (Tier 2)",
+  "item.humanoidrobotaddon.humanoid_robot_spawner_t3": "Humanoid Robot (Tier 3)",
+  "item.humanoidrobotaddon.humanoid_robot_spawner_t4": "Humanoid Robot (Tier 4)",
+  "item.humanoidrobotaddon.humanoid_robot_spawner_t5": "Humanoid Robot (Tier 5)",
+  "entity.humanoidrobotaddon.humanoid_robot": "Humanoid Robot",
+  "key.category.humanoidrobotaddon.humanoid_robot": "Humanoid Robot Addon",
+  "key.humanoidrobotaddon.movement_mode": "Movement Mode (hold for flight)",
+  "key.humanoidrobotaddon.flight_pitch_up": "Flight Mode: Pitch Up",
+  "key.humanoidrobotaddon.flight_pitch_down": "Flight Mode: Pitch Down",
+  "key.humanoidrobotaddon.flight_yaw_left": "Flight Mode: Yaw Left",
+  "key.humanoidrobotaddon.flight_yaw_right": "Flight Mode: Yaw Right",
+  "key.humanoidrobotaddon.lock_mode": "Multi-lock / Single-target",
+  "message.humanoidrobotaddon.lock_mode.multi": "Multi-lock (up to %s targets)",
+  "message.humanoidrobotaddon.lock_mode.single": "Single-target lock",
+  "message.humanoidrobotaddon.lock_mode.unsupported": "The selected weapon has no multi-lock"
+}

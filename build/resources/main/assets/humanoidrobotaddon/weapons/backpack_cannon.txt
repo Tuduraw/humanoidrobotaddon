@@ -1,0 +1,21 @@
+; Tier 4 tread walker's right-shoulder backpack cannon. Its channel (seat 7) is stow_when_inactive with
+; stow_pose pitch -90: folded upright while not selected, swinging forward to fire when selected.
+DisplayName = 120mm Backpack Cannon
+Type = MachineGun2
+Power = 60
+Explosion = 3.5
+Acceleration = 7.0
+Gravity = -0.03
+Accuracy = 0.4
+Round = 5
+ReloadTime = 160
+Delay = 50
+MaxAmmo = 40
+SuppliedNum = 5
+Item = 5, iron_ingot
+Item = 5, gunpowder
+SoundVolume = 4.0
+SoundPitch = 0.5
+ModelBullet = heavy_shell
+Recoil = 2.5
+AddMuzzleFlash = 1.8, 0.7, 1, 200, 255, 210, 160

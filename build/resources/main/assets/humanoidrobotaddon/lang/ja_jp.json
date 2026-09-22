@@ -1,0 +1,20 @@
+{
+  "itemGroup.humanoidrobotaddon.humanoid_robots": "人型ロボット",
+  "item.humanoidrobotaddon.category.humanoid_robot": "人型ロボット",
+  "item.humanoidrobotaddon.humanoid_robot_spawner_t1": "人型ロボット (ティア1)",
+  "item.humanoidrobotaddon.humanoid_robot_spawner_t2": "人型ロボット (ティア2)",
+  "item.humanoidrobotaddon.humanoid_robot_spawner_t3": "人型ロボット (ティア3)",
+  "item.humanoidrobotaddon.humanoid_robot_spawner_t4": "人型ロボット (ティア4)",
+  "item.humanoidrobotaddon.humanoid_robot_spawner_t5": "人型ロボット (ティア5)",
+  "entity.humanoidrobotaddon.humanoid_robot": "人型ロボット",
+  "key.category.humanoidrobotaddon.humanoid_robot": "人型ロボットアドオン",
+  "key.humanoidrobotaddon.movement_mode": "移動モード切替 (長押しで飛行)",
+  "key.humanoidrobotaddon.flight_pitch_up": "飛行モード: 機首上げ",
+  "key.humanoidrobotaddon.flight_pitch_down": "飛行モード: 機首下げ",
+  "key.humanoidrobotaddon.flight_yaw_left": "飛行モード: 左旋回",
+  "key.humanoidrobotaddon.flight_yaw_right": "飛行モード: 右旋回",
+  "key.humanoidrobotaddon.lock_mode": "マルチロック / 単一目標 切替",
+  "message.humanoidrobotaddon.lock_mode.multi": "マルチロック(最大%s目標)",
+  "message.humanoidrobotaddon.lock_mode.single": "単一目標ロック",
+  "message.humanoidrobotaddon.lock_mode.unsupported": "選択中の武装はマルチロックに対応していません"
+}

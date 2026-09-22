@@ -1,0 +1,21 @@
+; Tier 2 spider tank's twin heavy cannon - two muzzles (the vehicle JSON's own offsets list) on one
+; $cannon weapon part riding the $turret yaw stage, seat 4 (ASSIST).
+DisplayName = 105mm Twin Cannon
+Type = MachineGun2
+Power = 45
+Explosion = 2.5
+Acceleration = 6.5
+Gravity = -0.03
+Accuracy = 0.5
+Round = 10
+ReloadTime = 160
+Delay = 24
+MaxAmmo = 80
+SuppliedNum = 10
+Item = 4, iron_ingot
+Item = 4, gunpowder
+SoundVolume = 3.5
+SoundPitch = 0.6
+ModelBullet = heavy_shell
+Recoil = 2.0
+AddMuzzleFlash = 1.5, 0.6, 1, 200, 255, 210, 160

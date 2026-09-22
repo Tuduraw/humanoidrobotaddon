@@ -1,0 +1,20 @@
+; Left-shoulder missile pod. Deliberately a plain missile rather than AA/AT: this addon's own
+; target lock is what decides the target, not the weapon's own crosshair lock.
+DisplayName = Shoulder Missile Pod
+Type = Missile
+Power = 28
+Explosion = 3.0
+Acceleration = 2.2
+Gravity = -0.01
+LockTime = 10
+LockRange = 120
+Round = 6
+ReloadTime = 200
+Delay = 10
+MaxAmmo = 36
+SuppliedNum = 6
+Item = 4, iron_ingot
+Item = 2, gunpowder
+Item = 1, redstone
+SoundVolume = 2.5
+ModelBullet = missile

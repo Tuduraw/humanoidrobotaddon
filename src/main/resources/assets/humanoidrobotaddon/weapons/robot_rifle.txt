@@ -1,0 +1,21 @@
+; Right-arm rifle. Bound to the $arm_r weapon part, which is a LOCK_OR_SWING channel - so once a
+; target is designated, the arm (and therefore this weapon's own firing direction) follows it.
+DisplayName = 40mm Arm Rifle
+Type = MachineGun2
+Power = 11
+Acceleration = 9.0
+Gravity = -0.02
+Accuracy = 1.2
+Round = 60
+ReloadTime = 100
+Delay = 4
+MaxAmmo = 480
+SuppliedNum = 60
+Item = 3, iron_ingot
+Item = 2, gunpowder
+Piercing = 2
+SoundVolume = 2.5
+SoundPitch = 0.8
+ModelBullet = shell
+Recoil = 1.0
+AddMuzzleFlash = 0.9, 0.35, 1, 200, 254, 219, 184

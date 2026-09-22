@@ -1,0 +1,19 @@
+; Transformer jet's twin head vulcans - fixed guns pointing along the body's own +Y (the nose once the
+; body lies flat in FLIGHT; mount_pitch -90 in the vehicle JSON). Flight-only: movement.flight_only_seats.
+DisplayName = 20mm Vulcan
+Type = MachineGun1
+Power = 5
+Acceleration = 8.0
+Gravity = -0.01
+Accuracy = 1.5
+Round = 300
+ReloadTime = 120
+Delay = 2
+MaxAmmo = 1200
+SuppliedNum = 300
+Item = 2, iron_ingot
+Item = 1, gunpowder
+SoundVolume = 1.8
+SoundPitch = 1.4
+ModelBullet = shell
+AddMuzzleFlash = 0.5, 0.2, 1, 200, 255, 230, 190

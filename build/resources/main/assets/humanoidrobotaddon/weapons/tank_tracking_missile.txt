@@ -1,0 +1,21 @@
+; Tier 2 spider tank's rear missile rack. A homing Missile: it acquires its own lock-on through the
+; base mod's crosshair lock (LockTime/LockRange) and steers toward it after launch. The rack itself is
+; a LOCK channel (seat 6), so it also turns toward this addon's own designated target.
+DisplayName = Tracking Missile Rack
+Type = Missile
+Power = 35
+Explosion = 3.0
+Acceleration = 2.0
+Gravity = -0.005
+LockTime = 20
+LockRange = 120
+Round = 4
+ReloadTime = 220
+Delay = 12
+MaxAmmo = 24
+SuppliedNum = 4
+Item = 4, iron_ingot
+Item = 2, gunpowder
+Item = 2, redstone
+SoundVolume = 2.5
+ModelBullet = missile

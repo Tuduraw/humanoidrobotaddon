@@ -1,0 +1,73 @@
+; Humanoid robot HUD (humanoidrobotaddon) - a simple, readable baseline in the base mod's HUD script
+; format (MC Heli style). All coordinates are relative to the screen centre. Referenced from each
+; robot's vehicle JSON as "hud": "humanoid_robot".
+;
+; Shows: centre reticle, selected weapon / ammo / reload / heat, the base mod's own missile lock-on
+; gauge (sight_type 2 = missile sight), and vehicle status (HP, fuel, speed, altitude, throttle,
+; landing gear - shown only while an aircraft-style robot is flying).
+; This addon's own states (movement mode, designated locks) are not base HUD variables, so they are
+; not shown here - designated locks are marked in the world instead (red frames).
+
+; ---- reticle ------------------------------------------------------------------------------------
+Color = 220, 120, 255, 140
+DrawRect = -6, 0, 4, 1
+DrawRect = 3, 0, 4, 1
+DrawRect = 0, -6, 1, 4
+DrawRect = 0, 3, 1, 4
+
+; ---- missile lock-on gauge (only for missile-sight weapons) -------------------------------------
+If = sight_type == 2
+Color = 160, 40, 40, 40
+DrawRect = -40, 20, 80, 4
+Color = 230, 255, 200, 60
+DrawRect = -40, 20, 80 * lock_progress, 4
+If = locked
+Color = 255, 255, 70, 70
+DrawCenteredString = 0, 27, "LOCK"
+EndIf
+If = locked == 0
+Color = 230, 255, 200, 60
+DrawCenteredString = 0, 27, "LOCKING %.0f%%", lock_progress * 100
+EndIf
+EndIf
+
+; ---- weapon (bottom right) ----------------------------------------------------------------------
+Color = 230, 140, 255, 160
+DrawString = 70, 50, "%s", wpn_name
+If = reloading
+Color = 230, 255, 170, 60
+DrawString = 70, 60, "RELOADING"
+EndIf
+If = reloading == 0
+DrawString = 70, 60, "AMMO %d / %d", wpn_ammo, wpn_rm_ammo
+EndIf
+If = is_heat_wpn
+DrawString = 70, 70, "HEAT %.0f%%", wpn_heat * 100
+EndIf
+If = has_modes
+DrawString = 70, 80, "MODE %d", wpn_mode
+EndIf
+If = manual_mode
+Color = 230, 255, 220, 80
+DrawString = 70, 90, "MANUAL AIM"
+EndIf
+
+; ---- vehicle status (bottom left) ---------------------------------------------------------------
+Color = 230, 140, 255, 160
+DrawString = -170, 50, "HP   %d%%", hp_per
+DrawString = -170, 60, "FUEL %d", fuel
+DrawString = -170, 70, "SPD  %d km/h", speed_kbh
+DrawString = -170, 80, "ALT  %d", altitude
+DrawString = -170, 90, "THR  %d%%", throttle * 100
+If = gear_deployed
+Color = 230, 140, 255, 160
+DrawString = -170, 120, "GEAR DOWN"
+EndIf
+If = low_fuel
+Color = 255, 255, 80, 80
+DrawString = -170, 100, "LOW FUEL"
+EndIf
+If = hp_per < 25
+Color = 255, 255, 80, 80
+DrawString = -170, 110, "DAMAGE CRITICAL"
+EndIf

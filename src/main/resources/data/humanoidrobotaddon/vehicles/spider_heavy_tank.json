@@ -1,0 +1,349 @@
+{
+  "entity_type": "humanoidrobotaddon:humanoid_robot",
+  "model": "humanoidrobotaddon:models/obj/spider_heavy_tank.obj",
+  "texture": "humanoidrobotaddon:textures/vehicle/spider_heavy_tank.png",
+  "display_name": "Spider Heavy Tank",
+  "hud": "humanoid_robot",
+  "scale": 1.0,
+  "width": 3.4,
+  "height": 3.4,
+  "max_speed": 0.26,
+  "acceleration": 0.2,
+  "turn_speed": 2.8,
+  "step_height": 2.0,
+  "gravity": -0.06,
+  "on_ground_pitch": 0.0,
+  "reverse_throttle": -0.35,
+  "pivot_turn_throttle": 0.0,
+  "wheel_rotation_speed": 30.0,
+  "weight_type": "car",
+  "engine_sound_volume": 1.6,
+  "throttle_up_down": 4.0,
+  "max_health": 320.0,
+  "armor_damage_factor": 0.5,
+  "armor_min_damage": 2.0,
+  "armor_max_damage": 45.0,
+  "damage_factor": 0.3,
+  "max_fuel": 800.0,
+  "fuel_consumption": 0.45,
+  "inventory_size": 27,
+  "submerged_damage_height": 2.5,
+  "seats": [
+    {
+      "name": "pilot",
+      "offset_x": 0.0,
+      "offset_y": 1.9,
+      "offset_z": 0.4,
+      "driver": true,
+      "camera_positions": [
+        {
+          "x": 0.0,
+          "y": 3.5,
+          "z": 0.2
+        },
+        {
+          "x": 0.0,
+          "y": 5.5,
+          "z": -10.0,
+          "force_camera": true
+        }
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "seat_index": 4,
+      "pilot_usable": true,
+      "weapon_name": "tank_twin_cannon",
+      "projectile_item": "minecraft:iron_nugget",
+      "turret_rotation_speed": 45.0,
+      "offsets": [
+        {
+          "x": 0.35,
+          "y": 2.95,
+          "z": 3.05,
+          "linked_part": "$cannon"
+        },
+        {
+          "x": -0.35,
+          "y": 2.95,
+          "z": 3.05,
+          "linked_part": "$cannon"
+        }
+      ],
+      "aim_range": {
+        "default_yaw": 0.0,
+        "min_yaw": -180.0,
+        "max_yaw": 180.0,
+        "min_pitch": -25.0,
+        "max_pitch": 10.0
+      }
+    },
+    {
+      "seat_index": 6,
+      "pilot_usable": true,
+      "weapon_name": "tank_tracking_missile",
+      "projectile_item": "minecraft:firework_rocket",
+      "turret_rotation_speed": 60.0,
+      "offsets": [
+        {
+          "x": 0.0,
+          "y": 2.95,
+          "z": -0.85,
+          "linked_part": "$missile_rack"
+        }
+      ],
+      "aim_range": {
+        "default_yaw": 0.0,
+        "min_yaw": -90.0,
+        "max_yaw": 90.0,
+        "min_pitch": -60.0,
+        "max_pitch": 10.0
+      }
+    }
+  ],
+  "weapon_parts": [
+    {
+      "part": "$turret",
+      "seat_index": 4,
+      "pilot_fallback": true,
+      "yaw_follow": true,
+      "pitch_follow": false,
+      "pivot_x": 0.0,
+      "pivot_y": 2.6,
+      "pivot_z": -0.1,
+      "aim_range": {
+        "default_yaw": 0.0,
+        "min_yaw": -180.0,
+        "max_yaw": 180.0,
+        "min_pitch": -25.0,
+        "max_pitch": 10.0
+      }
+    },
+    {
+      "part": "$cannon",
+      "seat_index": 4,
+      "pilot_fallback": true,
+      "yaw_follow": false,
+      "pitch_follow": true,
+      "weapon_name": "tank_twin_cannon",
+      "pivot_x": 0.0,
+      "pivot_y": 2.95,
+      "pivot_z": 0.75,
+      "recoil_distance": 0.2,
+      "aim_range": {
+        "default_yaw": 0.0,
+        "min_yaw": -180.0,
+        "max_yaw": 180.0,
+        "min_pitch": -25.0,
+        "max_pitch": 10.0
+      },
+      "child_info": {
+        "parent_yaw_follow": true,
+        "parent_pitch_follow": false,
+        "parent_pivot_x": 0.0,
+        "parent_pivot_y": 2.6,
+        "parent_pivot_z": -0.1
+      }
+    },
+    {
+      "part": "$missile_rack",
+      "seat_index": 6,
+      "pilot_fallback": true,
+      "yaw_follow": true,
+      "pitch_follow": true,
+      "weapon_name": "tank_tracking_missile",
+      "pivot_x": 0.0,
+      "pivot_y": 2.7,
+      "pivot_z": -1.3,
+      "aim_range": {
+        "default_yaw": 0.0,
+        "min_yaw": -90.0,
+        "max_yaw": 90.0,
+        "min_pitch": -60.0,
+        "max_pitch": 10.0
+      }
+    }
+  ],
+  "humanoid_robot": {
+    "lock_range": 96.0,
+    "lock_cone_degrees": 30.0,
+    "lock_origin_y": 2.8,
+    "highlight_target": true,
+    "swing_min_speed": 0.01,
+    "swing_full_speed": 0.26,
+    "swing_response": 0.12,
+    "gait_cycle_speed": 3.0,
+    "movement": {
+      "climb_speed": 0.35,
+      "glide": {
+        "speed": 3.0,
+        "acceleration": 0.3333,
+        "fuel": 3.0
+      },
+      "flight": {
+        "speed": 5.0,
+        "acceleration": 0.1,
+        "fuel": 5.0
+      },
+      "flight_yaw_rate_degrees_per_tick": 6.0,
+      "flight_pitch_rate_degrees_per_tick": 12.0,
+      "flight_roll_degrees_per_tick": 4.0,
+      "flight_rotation_smoothing": 0.2,
+      "flight_level_assist_grace_ticks": 100,
+      "flight_level_assist_smoothing": 0.02,
+      "flight_vertical_speed": 0.4,
+      "mode_hold_ticks": 6,
+      "mode_availability": 1,
+      "climb_limit_ticks": 20
+    },
+    "mode_visuals": {
+      "transition_speed": 2.0,
+      "flight_body_pitch": 0.0,
+      "parts": [],
+      "lean_follow_seats": []
+    },
+    "ballistic_compensation": true,
+    "max_ballistic_compensation_degrees": 45.0,
+    "channels": [
+      {
+        "seat_index": 4,
+        "mode": "assist"
+      },
+      {
+        "seat_index": 6,
+        "mode": "lock"
+      }
+    ],
+    "joints": [
+      {
+        "part": "$leg_fr_upper",
+        "pivot_x": 1.4,
+        "pivot_y": 2.0,
+        "pivot_z": 1.45,
+        "axis_x": 0.0,
+        "axis_y": 1.0,
+        "axis_z": 0.0,
+        "gait": {
+          "amplitude": 15.0,
+          "phase": 0.0
+        },
+        "min_angle": -35.0,
+        "max_angle": 35.0
+      },
+      {
+        "part": "$leg_fr_lower",
+        "parent": "$leg_fr_upper",
+        "pivot_x": 2.4,
+        "pivot_y": 2.25,
+        "pivot_z": 1.45,
+        "axis_x": 0.0,
+        "axis_y": 0.0,
+        "axis_z": 1.0,
+        "gait": {
+          "amplitude": 22.0,
+          "phase": 90.0
+        },
+        "min_angle": 0.0,
+        "max_angle": 22.0
+      },
+      {
+        "part": "$leg_fl_upper",
+        "pivot_x": -1.4,
+        "pivot_y": 2.0,
+        "pivot_z": 1.45,
+        "axis_x": 0.0,
+        "axis_y": 1.0,
+        "axis_z": 0.0,
+        "gait": {
+          "amplitude": 15.0,
+          "phase": 180.0
+        },
+        "min_angle": -35.0,
+        "max_angle": 35.0
+      },
+      {
+        "part": "$leg_fl_lower",
+        "parent": "$leg_fl_upper",
+        "pivot_x": -2.4,
+        "pivot_y": 2.25,
+        "pivot_z": 1.45,
+        "axis_x": 0.0,
+        "axis_y": 0.0,
+        "axis_z": -1.0,
+        "gait": {
+          "amplitude": 22.0,
+          "phase": 270.0
+        },
+        "min_angle": 0.0,
+        "max_angle": 22.0
+      },
+      {
+        "part": "$leg_br_upper",
+        "pivot_x": 1.4,
+        "pivot_y": 2.0,
+        "pivot_z": -1.45,
+        "axis_x": 0.0,
+        "axis_y": 1.0,
+        "axis_z": 0.0,
+        "gait": {
+          "amplitude": 15.0,
+          "phase": 180.0
+        },
+        "min_angle": -35.0,
+        "max_angle": 35.0
+      },
+      {
+        "part": "$leg_br_lower",
+        "parent": "$leg_br_upper",
+        "pivot_x": 2.4,
+        "pivot_y": 2.25,
+        "pivot_z": -1.45,
+        "axis_x": 0.0,
+        "axis_y": 0.0,
+        "axis_z": 1.0,
+        "gait": {
+          "amplitude": 22.0,
+          "phase": 270.0
+        },
+        "min_angle": 0.0,
+        "max_angle": 22.0
+      },
+      {
+        "part": "$leg_bl_upper",
+        "pivot_x": -1.4,
+        "pivot_y": 2.0,
+        "pivot_z": -1.45,
+        "axis_x": 0.0,
+        "axis_y": 1.0,
+        "axis_z": 0.0,
+        "gait": {
+          "amplitude": 15.0,
+          "phase": 0.0
+        },
+        "min_angle": -35.0,
+        "max_angle": 35.0
+      },
+      {
+        "part": "$leg_bl_lower",
+        "parent": "$leg_bl_upper",
+        "pivot_x": -2.4,
+        "pivot_y": 2.25,
+        "pivot_z": -1.45,
+        "axis_x": 0.0,
+        "axis_y": 0.0,
+        "axis_z": -1.0,
+        "gait": {
+          "amplitude": 22.0,
+          "phase": 90.0
+        },
+        "min_angle": 0.0,
+        "max_angle": 22.0
+      }
+    ]
+  },
+  "spawn_item": {
+    "display_name": "Spider Heavy Tank",
+    "tier": 2
+  }
+}

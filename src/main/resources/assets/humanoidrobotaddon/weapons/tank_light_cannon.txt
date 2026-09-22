@@ -1,0 +1,21 @@
+; Tier 1 spider tank's turret cannon. Bound to the $cannon weapon part (a child of the $turret yaw
+; stage), both on seat 4 - an ASSIST channel, so the turret tracks the candidate or the pilot's view.
+DisplayName = 57mm Tank Cannon
+Type = MachineGun2
+Power = 30
+Explosion = 1.5
+Acceleration = 6.0
+Gravity = -0.03
+Accuracy = 0.6
+Round = 8
+ReloadTime = 120
+Delay = 30
+MaxAmmo = 64
+SuppliedNum = 8
+Item = 3, iron_ingot
+Item = 3, gunpowder
+SoundVolume = 3.0
+SoundPitch = 0.7
+ModelBullet = heavy_shell
+Recoil = 1.5
+AddMuzzleFlash = 1.2, 0.5, 1, 200, 255, 210, 160

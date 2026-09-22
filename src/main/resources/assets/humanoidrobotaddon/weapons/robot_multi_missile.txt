@@ -1,0 +1,40 @@
+; Multi-lock micro-missile pod (left shoulder). Type is this addon's own registered custom weapon
+; type (see the base mod's own WeaponType.CUSTOM / CustomWeaponTypes doc, and this addon's own
+; weapon.MultiMissileBehavior) - lock-on target, per-round guidance and salvo size all come from this
+; addon's own designated-lock system (channel multi_lock below) instead of the base mod's own default
+; crosshair lock-on. Everything else (ammo, cooldown, reload, projectile flight) is the base mod's
+; own ordinary missile handling, same as Type = Missile.
+DisplayName = Multi-Lock Missile Pod
+Type = humanoidrobotaddon:multi_missile
+Power = 16
+Explosion = 1.8
+Acceleration = 2.4
+Gravity = -0.005
+LockTime = 10
+LockRange = 120
+Round = 8
+ReloadTime = 240
+Delay = 40
+MaxAmmo = 48
+SuppliedNum = 8
+Item = 4, iron_ingot
+Item = 2, gunpowder
+Item = 2, redstone
+SoundVolume = 2.5
+ModelBullet = missile
+Power = 16
+Explosion = 1.8
+Acceleration = 2.4
+Gravity = -0.005
+LockTime = 10
+LockRange = 120
+Round = 8
+ReloadTime = 240
+Delay = 40
+MaxAmmo = 48
+SuppliedNum = 8
+Item = 4, iron_ingot
+Item = 2, gunpowder
+Item = 2, redstone
+SoundVolume = 2.5
+ModelBullet = missile

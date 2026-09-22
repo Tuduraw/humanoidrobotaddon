@@ -1,0 +1,438 @@
+{
+  "entity_type": "humanoidrobotaddon:humanoid_robot",
+  "model": "humanoidrobotaddon:models/obj/quad_flyer.obj",
+  "texture": "humanoidrobotaddon:textures/vehicle/quad_flyer.png",
+  "display_name": "Quad Flyer",
+  "hud": "humanoid_robot",
+  "scale": 1.0,
+  "width": 2.2,
+  "height": 3.8,
+  "max_speed": 0.4,
+  "acceleration": 0.3,
+  "turn_speed": 4.5,
+  "step_height": 1.2,
+  "gravity": -0.06,
+  "on_ground_pitch": 0.0,
+  "reverse_throttle": -0.35,
+  "pivot_turn_throttle": 0.0,
+  "wheel_rotation_speed": 30.0,
+  "weight_type": "car",
+  "engine_sound_volume": 1.6,
+  "throttle_up_down": 4.0,
+  "max_health": 220.0,
+  "armor_damage_factor": 0.65,
+  "armor_min_damage": 2.0,
+  "armor_max_damage": 45.0,
+  "damage_factor": 0.3,
+  "max_fuel": 600.0,
+  "fuel_consumption": 0.35,
+  "inventory_size": 27,
+  "submerged_damage_height": 2.5,
+  "seats": [
+    {
+      "name": "pilot",
+      "offset_x": 0.0,
+      "offset_y": 2.9,
+      "offset_z": 0.5,
+      "driver": true,
+      "camera_positions": [
+        {
+          "x": 0.0,
+          "y": 3.8,
+          "z": 0.6
+        },
+        {
+          "x": 0.0,
+          "y": 5.5,
+          "z": -9.0,
+          "force_camera": true
+        }
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "seat_index": 4,
+      "pilot_usable": true,
+      "weapon_name": "robot_rifle",
+      "projectile_item": "minecraft:iron_nugget",
+      "turret_rotation_speed": 110.0,
+      "offsets": [
+        {
+          "x": 1.15,
+          "y": 2.75,
+          "z": 1.7999999999999998,
+          "linked_part": "$arm_r"
+        }
+      ],
+      "aim_range": {
+        "default_yaw": 0.0,
+        "min_yaw": -120.0,
+        "max_yaw": 120.0,
+        "min_pitch": -80.0,
+        "max_pitch": 60.0
+      }
+    },
+    {
+      "seat_index": 5,
+      "pilot_usable": true,
+      "weapon_name": "robot_multi_missile",
+      "projectile_item": "minecraft:firework_rocket",
+      "turret_rotation_speed": 80.0,
+      "offsets": [
+        {
+          "x": 0.95,
+          "y": 3.77,
+          "z": 0.9,
+          "linked_part": "$shoulder_pod_l"
+        }
+      ],
+      "aim_range": {
+        "default_yaw": 0.0,
+        "min_yaw": -60.0,
+        "max_yaw": 60.0,
+        "min_pitch": -70.0,
+        "max_pitch": 20.0
+      }
+    }
+  ],
+  "weapon_parts": [
+    {
+      "part": "$head",
+      "seat_index": 0,
+      "yaw_follow": true,
+      "pitch_follow": true,
+      "pivot_x": 0.0,
+      "pivot_y": 3.6500000000000004,
+      "pivot_z": 0.35
+    },
+    {
+      "part": "$arm_r",
+      "seat_index": 4,
+      "pilot_fallback": true,
+      "yaw_follow": true,
+      "pitch_follow": true,
+      "weapon_name": "robot_rifle",
+      "pivot_x": 1.15,
+      "pivot_y": 3.3000000000000003,
+      "pivot_z": 0.35,
+      "recoil_distance": 0.12,
+      "aim_range": {
+        "default_yaw": 0.0,
+        "min_yaw": -120.0,
+        "max_yaw": 120.0,
+        "min_pitch": -80.0,
+        "max_pitch": 60.0
+      }
+    },
+    {
+      "part": "$shoulder_pod_l",
+      "seat_index": 5,
+      "pilot_fallback": true,
+      "yaw_follow": true,
+      "pitch_follow": true,
+      "weapon_name": "robot_multi_missile",
+      "pivot_x": 0.95,
+      "pivot_y": 3.5,
+      "pivot_z": 0.35,
+      "aim_range": {
+        "default_yaw": 0.0,
+        "min_yaw": -60.0,
+        "max_yaw": 60.0,
+        "min_pitch": -70.0,
+        "max_pitch": 20.0
+      }
+    }
+  ],
+  "humanoid_robot": {
+    "lock_range": 96.0,
+    "lock_cone_degrees": 30.0,
+    "lock_origin_y": 3.3,
+    "highlight_target": true,
+    "swing_min_speed": 0.01,
+    "swing_full_speed": 0.4,
+    "swing_response": 0.12,
+    "gait_cycle_speed": 3.0,
+    "movement": {
+      "climb_speed": 0.45,
+      "glide": {
+        "speed": 3.5,
+        "acceleration": 0.6,
+        "fuel": 2.5
+      },
+      "flight": {
+        "speed": 6.0,
+        "acceleration": 0.3,
+        "fuel": 4.0
+      },
+      "flight_yaw_rate_degrees_per_tick": 8.0,
+      "flight_pitch_rate_degrees_per_tick": 14.0,
+      "flight_roll_degrees_per_tick": 6.0,
+      "flight_rotation_smoothing": 0.2,
+      "flight_level_assist_grace_ticks": 100,
+      "flight_level_assist_smoothing": 0.02,
+      "flight_vertical_speed": 0.55,
+      "mode_hold_ticks": 6,
+      "mode_availability": 2,
+      "climb_limit_ticks": -1
+    },
+    "mode_visuals": {
+      "transition_speed": 2.5,
+      "flight_body_pitch": 0.0,
+      "parts": [
+        {
+          "part": "$thrusters",
+          "walk": 0.0,
+          "glide": 1.0,
+          "flight": 1.0
+        }
+      ],
+      "lean_follow_seats": []
+    },
+    "ballistic_compensation": true,
+    "max_ballistic_compensation_degrees": 45.0,
+    "channels": [
+      {
+        "seat_index": 4,
+        "mode": "assist",
+        "swing": true,
+        "amplitude": 22.0,
+        "phase": 180.0,
+        "stow_when_inactive": true
+      },
+      {
+        "seat_index": 5,
+        "mode": "lock",
+        "multi_lock": {
+          "max_targets": 4,
+          "salvo_size": 8
+        }
+      }
+    ],
+    "joints": [
+      {
+        "part": "$spread_fr",
+        "pivot_x": 0.85,
+        "pivot_y": 1.7,
+        "pivot_z": 0.95,
+        "axis_x": 0.0,
+        "axis_y": 0.0,
+        "axis_z": 1.0,
+        "glide_pose": 85.0,
+        "flight_pose": 85.0,
+        "min_angle": 0.0,
+        "max_angle": 90.0
+      },
+      {
+        "part": "$thigh_fr",
+        "parent": "$spread_fr",
+        "pivot_x": 0.85,
+        "pivot_y": 1.7,
+        "pivot_z": 0.95,
+        "gait": {
+          "amplitude": 28.0,
+          "phase": 0.0
+        },
+        "min_angle": -45.0,
+        "max_angle": 45.0
+      },
+      {
+        "part": "$shin_fr",
+        "parent": "$thigh_fr",
+        "pivot_x": 0.85,
+        "pivot_y": 0.75,
+        "pivot_z": 0.95,
+        "gait": {
+          "amplitude": 35.0,
+          "phase": 270.0
+        },
+        "glide_pose": -5.0,
+        "flight_pose": -5.0,
+        "min_angle": -10.0,
+        "max_angle": 60.0
+      },
+      {
+        "part": "$spread_fl",
+        "pivot_x": -0.85,
+        "pivot_y": 1.7,
+        "pivot_z": 0.95,
+        "axis_x": 0.0,
+        "axis_y": 0.0,
+        "axis_z": -1.0,
+        "glide_pose": 85.0,
+        "flight_pose": 85.0,
+        "min_angle": 0.0,
+        "max_angle": 90.0
+      },
+      {
+        "part": "$thigh_fl",
+        "parent": "$spread_fl",
+        "pivot_x": -0.85,
+        "pivot_y": 1.7,
+        "pivot_z": 0.95,
+        "gait": {
+          "amplitude": 28.0,
+          "phase": 180.0
+        },
+        "min_angle": -45.0,
+        "max_angle": 45.0
+      },
+      {
+        "part": "$shin_fl",
+        "parent": "$thigh_fl",
+        "pivot_x": -0.85,
+        "pivot_y": 0.75,
+        "pivot_z": 0.95,
+        "gait": {
+          "amplitude": 35.0,
+          "phase": 90.0
+        },
+        "glide_pose": -5.0,
+        "flight_pose": -5.0,
+        "min_angle": -10.0,
+        "max_angle": 60.0
+      },
+      {
+        "part": "$spread_br",
+        "pivot_x": 0.85,
+        "pivot_y": 1.7,
+        "pivot_z": -0.95,
+        "axis_x": 0.0,
+        "axis_y": 0.0,
+        "axis_z": 1.0,
+        "glide_pose": 85.0,
+        "flight_pose": 85.0,
+        "min_angle": 0.0,
+        "max_angle": 90.0
+      },
+      {
+        "part": "$thigh_br",
+        "parent": "$spread_br",
+        "pivot_x": 0.85,
+        "pivot_y": 1.7,
+        "pivot_z": -0.95,
+        "gait": {
+          "amplitude": 28.0,
+          "phase": 180.0
+        },
+        "min_angle": -45.0,
+        "max_angle": 45.0
+      },
+      {
+        "part": "$shin_br",
+        "parent": "$thigh_br",
+        "pivot_x": 0.85,
+        "pivot_y": 0.75,
+        "pivot_z": -0.95,
+        "gait": {
+          "amplitude": 35.0,
+          "phase": 90.0
+        },
+        "glide_pose": -5.0,
+        "flight_pose": -5.0,
+        "min_angle": -10.0,
+        "max_angle": 60.0
+      },
+      {
+        "part": "$spread_bl",
+        "pivot_x": -0.85,
+        "pivot_y": 1.7,
+        "pivot_z": -0.95,
+        "axis_x": 0.0,
+        "axis_y": 0.0,
+        "axis_z": -1.0,
+        "glide_pose": 85.0,
+        "flight_pose": 85.0,
+        "min_angle": 0.0,
+        "max_angle": 90.0
+      },
+      {
+        "part": "$thigh_bl",
+        "parent": "$spread_bl",
+        "pivot_x": -0.85,
+        "pivot_y": 1.7,
+        "pivot_z": -0.95,
+        "gait": {
+          "amplitude": 28.0,
+          "phase": 0.0
+        },
+        "min_angle": -45.0,
+        "max_angle": 45.0
+      },
+      {
+        "part": "$shin_bl",
+        "parent": "$thigh_bl",
+        "pivot_x": -0.85,
+        "pivot_y": 0.75,
+        "pivot_z": -0.95,
+        "gait": {
+          "amplitude": 35.0,
+          "phase": 270.0
+        },
+        "glide_pose": -5.0,
+        "flight_pose": -5.0,
+        "min_angle": -10.0,
+        "max_angle": 60.0
+      },
+      {
+        "part": "$forearm_r",
+        "parent": "$arm_r",
+        "pivot_x": 1.15,
+        "pivot_y": 2.75,
+        "pivot_z": 0.35,
+        "rest_angle": 70.0,
+        "gait": {
+          "amplitude": 10.0,
+          "phase": 270.0
+        },
+        "min_angle": -10.0,
+        "max_angle": 90.0,
+        "ready_seat": 4,
+        "ready_angle": 0.0
+      },
+      {
+        "part": "$upperarm_l",
+        "pivot_x": -1.15,
+        "pivot_y": 3.3000000000000003,
+        "pivot_z": 0.35,
+        "gait": {
+          "amplitude": 22.0,
+          "phase": 0.0
+        },
+        "flight_pose": 30.0,
+        "min_angle": -60.0,
+        "max_angle": 60.0
+      },
+      {
+        "part": "$forearm_l",
+        "parent": "$upperarm_l",
+        "pivot_x": -1.15,
+        "pivot_y": 2.6500000000000004,
+        "pivot_z": 0.35,
+        "rest_angle": -20.0,
+        "gait": {
+          "amplitude": 15.0,
+          "phase": 90.0
+        },
+        "glide_pose": -20.0,
+        "flight_pose": -15.0,
+        "min_angle": -90.0,
+        "max_angle": 0.0
+      }
+    ]
+  },
+  "spawn_item": {
+    "display_name": "Quad Flyer",
+    "tier": 5
+  },
+  "toggle_parts": [
+    {
+      "part": "$thrusters",
+      "mode": "slide",
+      "offset_x": 0.0,
+      "offset_y": -0.25,
+      "offset_z": 0.0,
+      "trigger": "movement_mode"
+    }
+  ]
+}

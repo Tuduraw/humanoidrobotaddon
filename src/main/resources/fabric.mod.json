@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "humanoidrobotaddon",
+  "version": "${version}",
+  "name": "Humanoid Robot Addon",
+  "description": "Adds walking humanoid robots to Tudur's Vehicle Mod, with a target-lock system that drives arm and weapon parts independently of where the pilot is looking.",
+  "authors": [ "Tuduraw" ],
+  "contact": {},
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [ "com.example.humanoidrobotaddon.HumanoidRobotAddon" ],
+    "client": [ "com.example.humanoidrobotaddon.client.HumanoidRobotAddonClient" ]
+  },
+  "depends": {
+    "fabricloader": ">=0.18.0",
+    "fabric-api": "*",
+    "minecraft": "1.21.11",
+    "java": ">=21",
+    "tudursvehiclemod": ">=1.0.2"
+  },
+  "mixins": [
+    {
+      "config": "humanoidrobotaddon.client.mixins.json",
+      "environment": "client"
+    }
+  ]
+}

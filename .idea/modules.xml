@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/humanoidrobotaddon.client.iml" filepath="$PROJECT_DIR$/.idea/modules/humanoidrobotaddon.client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/humanoidrobotaddon.main.iml" filepath="$PROJECT_DIR$/.idea/modules/humanoidrobotaddon.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/humanoidrobotaddon.test.iml" filepath="$PROJECT_DIR$/.idea/modules/humanoidrobotaddon.test.iml" />
+    </modules>
+  </component>
+</project>
