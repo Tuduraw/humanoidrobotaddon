@@ -1,6 +1,6 @@
 # Humanoid Robot Addon
 
-Tudur's Vehicle Mod (`tudursvehiclemod`) のアドオンMODとして、人型ロボットや多脚機など
+Tudur's Vehicle Mod (`tudursvehiclemod`https://github.com/Tuduraw/tudursvehiclemod) のアドオンMODとして、人型ロボットや多脚機など
 「脚で歩く機体」を追加します。前提MODの公開APIとオーバーライド可能なメソッドだけで
 実装しており、前提MODへのmixinは使っていません(vanillaへのmixinは飛行時のカメラ用に
 2つあります)。
